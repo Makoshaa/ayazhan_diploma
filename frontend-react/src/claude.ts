@@ -1,9 +1,11 @@
 import Anthropic from '@anthropic-ai/sdk';
 import type { PIIResult } from './types';
 
-const DEFAULT_CLAUDE_API_KEY = '';
+// Читаем ключ из переменных окружения Vite
+const DEFAULT_CLAUDE_API_KEY = import.meta.env.VITE_CLAUDE_API_KEY || '';
 
 export function getClaudeApiKey(): string {
+  // Приоритет: 1) localStorage (Settings), 2) env переменная
   return localStorage.getItem('claudeApiKey') || DEFAULT_CLAUDE_API_KEY;
 }
 
