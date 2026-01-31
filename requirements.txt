@@ -1,0 +1,28 @@
+# Core dependencies для Presidio Analyzer
+spacy>=3.4.4,!=3.7.0
+regex
+tldextract
+pyyaml
+phonenumbers>=8.12,<10.0.0
+
+# Core dependencies для Presidio Anonymizer
+cryptography<44.1
+
+# Flask server dependencies
+flask>=1.1
+flask-cors>=4.0,<5.0
+waitress
+
+# Authentication dependencies
+psycopg2-binary>=2.9.0
+flask-jwt-extended>=4.5.0
+bcrypt>=4.0.0
+python-dotenv>=1.0.0
+
+# Spacy language model (English)
+# Установится отдельной командой после установки spacy
+
+# Optional: Development dependencies (раскомментируйте если нужны)
+# python-dotenv
+# pytest
+# pytest-mock
